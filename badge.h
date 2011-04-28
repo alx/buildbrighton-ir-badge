@@ -41,8 +41,8 @@
 #define PROGRAM_BADGE_ID     0x09
 
 // some debugging modes
-#define DEBUG_TURN_OFF_DISPLAY 0b00000001
-#define DEBUG_TURN_OFF_SENDNEC 0b00000001
+#define DEBUG_TURN_OFF_DISPLAY B8(00000001)
+#define DEBUG_TURN_OFF_SENDNEC B8(00000001)
 
 // Zombie game
 #define BITTEN_MAX         3
@@ -63,13 +63,13 @@
 #define MAX_SAME_COLOUR_RECV 5
 
 // for matt's design
-#define bogusMask    0b00100000
-#define redMask      0b00000100
-#define grnMask      0b00000010
-#define bluMask      0b00000001
-#define rgbMask      0b00000111
-#define irInMask     0b00001000
-#define irOutMask    0b00010000
+#define bogusMask    B8(00100000)
+#define redMask      B8(00000100)
+#define grnMask      B8(00000010)
+#define bluMask      B8(00000001)
+#define rgbMask      B8(00000111)
+#define irInMask     B8(00001000)
+#define irOutMask    B8(00010000)
 // 4 = PB3
 #define irInPortBPin  4
 
@@ -84,10 +84,10 @@
 #define RED 0
 #define GREEN 1
 #define BLUE 2
-#define displayRedMask 0b00000011
-#define displayGrnMask 0b00001100
-#define displayBluMask 0b00110000
-#define displayRGBMask 0b00111111
+#define displayRedMask B8(00000011)
+#define displayGrnMask B8(00001100)
+#define displayBluMask B8(00110000)
+#define displayRGBMask B8(00111111)
 
 // how many times to send our IR code in each 1s loop.
 #define NUM_SENDS 1

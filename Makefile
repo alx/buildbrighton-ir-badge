@@ -1,16 +1,19 @@
-MCU = attiny45
+MCU = attiny25
 #MCU = attiny25
 #MCU = attiny85
 
 F_CPU = 8000000   	# 8 MHz
 
 #AVRDUDE_PROGRAMMER = usbtiny
-AVRDUDE_PROGRAMMER = stk500v2
+#AVRDUDE_PROGRAMMER = stk500v2
 
 #AVRDUDE_PORT =  /dev/cu.usbmodemfa221	# programmer connected to USB
 #AVRDUDE_PORT =  /dev/cu.usbmodemfd121	# programmer connected to USB
 #AVRDUDE_PORT =  /dev/cu.usbmodem1a21	# programmer connected to USB
-AVRDUDE_PORT =  /dev/cu.usbmodem1d11	# programmer connected to USB
+#AVRDUDE_PORT =  /dev/cu.usbmodem1d11	# programmer connected to USB
+
+AVRDUDE_PROGRAMMER = avrisp
+AVRDUDE_PORT = /dev/tty.usbserial-A7006Qs0
 
 # Default target.
 
@@ -82,7 +85,7 @@ AVRDUDE = avrdude
 
 # Programming support using avrdude. Settings and variables.
 AVRDUDE_WRITE_FLASH = -U flash:w:
-AVRDUDE_FLAGS = -p $(MCU) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER)
+AVRDUDE_FLAGS = -p $(MCU) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER) -b 19200
 
 # ---------------------------------------------------------------------------
 
