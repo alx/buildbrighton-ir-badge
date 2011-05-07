@@ -1,6 +1,6 @@
-MCU = attiny25
 #MCU = attiny25
-#MCU = attiny85
+#MCU = attiny25
+MCU = attiny85
 
 F_CPU = 8000000   	# 8 MHz
 

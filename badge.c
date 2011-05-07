@@ -33,7 +33,7 @@
 #define B8(d) ((unsigned char)B8__(HEX__(d)))  
 
 #include "badge.h"
-//#include "trippyrgb.h"
+#include "trippyrgb.h"
 
 uint8_t last_eeprom_read = 1;
 uint8_t enable_rgb_led = 1;
@@ -103,11 +103,11 @@ void space(int time) {
 void enableIROut(void) {
 
 #ifdef TRIPPY_RGB_WAVE
-  TCCR0A = 0b01000010;  // COM0A1:0=01 to toggle OC0A on Compare Match
+  TCCR0A = B8(01000010);  // COM0A1:0=01 to toggle OC0A on Compare Match
                             // COM0B1:0=00 to disconnect OC0B
                             // bits 3:2 are unused
                             // WGM01:00=10 for CTC Mode (WGM02=0 in TCCR0B)
-  TCCR0B = 0b00000001;  // FOC0A=0 (no force compare)
+  TCCR0B = B8(00000001);  // FOC0A=0 (no force compare)
                               // F0C0B=0 (no force compare)
                               // bits 5:4 are unused
                               // WGM2=0 for CTC Mode (WGM01:00=10 in TCCR0A)

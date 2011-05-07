@@ -2,13 +2,13 @@
 #define TRIPPY_RGB_WAVE 1
 
 // overrides for Cornfield Trippy RGB Wave board
-#define bogusMask    0b00100000
-#define redMask      0b00000010
-#define grnMask      0b00010000
-#define bluMask      0b00000100
-#define rgbMask      0b00010110
-#define irInMask     0b00001000
-#define irOutMask    0b00000001
+#define bogusMask    B8(00100000)
+#define redMask      B8(00000010)
+#define grnMask      B8(00010000)
+#define bluMask      B8(00000100)
+#define rgbMask      B8(00010110)
+#define irInMask     B8(00001000)
+#define irOutMask    B8(00000001)
 // 4 = PB3
 #define irInPortBPin  4
 
